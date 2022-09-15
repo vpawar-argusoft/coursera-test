@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- script for angular file and app -->
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <title>Name Calculator</title>
 </head>
-<body>
-    <p>Hello Coursera-AngularJS students</p>
-    <h1> Welcome to AngularJS and hurray !!</h1>
+<body  ng-app="NameCalculator">
+    
+    <h1> Name Calculator</h1>
+
+
+    <div  ng-controller="NameCalculatorController">
+        <div>
+            Your Name : 
+            
+            <input type="text" 
+            ng-model="name" 
+            ng-keyup="displayNumeric()">
+
+             {{name}}
+        </div>
+        <div>
+            Total numeric value of persons name is : {{totalValue}}
+        </div>
+    </div>
+
 </body>
 </html>
